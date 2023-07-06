@@ -1,0 +1,215 @@
+$color-one:#55c57a;
+$color-two:#55c57a;
+$color-three:#28b485;
+$text-color-white: #fff;
+$text-color-grey: #777;
+$text-color-black: black;
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    /* sometimes people change thier browser zoom size 
+    so instead of keeping it as 10px, make it in % 
+    so 10px÷16px(16px is browser default)
+    10/16=0.625=> 62.5% */
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 1.6rem; */
+    line-height: 1.5;
+    color: $text-color-grey;
+    padding: 2.5rem;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+            rgba($color-one, 0.8),
+            rgba($color-three, 0.8)),
+        url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    /* clip-path: polygon(0 100%, 50% 0, 100% 100%); */
+    position: relative;
+    &__logodiv {
+        position: absolute;
+        top: 3.5rem;
+        left: 3.5rem;
+    }
+    &__logo {
+        height: 3.5rem;
+        /* position: fixed; */
+    }
+    &__logo:hover {
+        animation: rotate360 1s ease-in-out;
+    }
+    &__main-text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        /* background-color: red; */
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+.mainhead1 {
+    color: $text-color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    /*tells if backside of an element while rotating is visible or not*/
+    margin-bottom: 5rem;
+    
+     .mainheading--one {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation-name: biglettermovement;
+        animation-duration: 0.65s;
+        animation-timing-function: ease-out;
+        /* animation-delay: 0.5s;
+        animation-iteration-count: 3; */
+            &:hover{
+            transform: scaleX(1.1);
+            color: rgb(7, 81, 7);
+            transition: 0.5s;
+        
+        }
+    
+    }
+    
+    .mainheading--two {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: smalllettermovement 0.65s ease-out;
+        /* name, duration, animation-timing-function */
+    }
+}
+
+@keyframes biglettermovement {
+    0% {
+        opacity: 0%;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translate(0);
+    }
+}
+
+@keyframes smalllettermovement {
+    0% {
+        opacity: 0%;
+        transform: translateX(20rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translate(0);
+    }
+}
+
+@keyframes rotate360 {
+    0% {
+        opacity: 0%;
+        transform: rotate(0);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: rotate(360deg);
+    }
+}
+.button{
+    &:link,
+    &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.15s;
+    position: relative;
+    font-size: 1.5rem;
+    &:hover {
+        transform: translateY(-0.3rem);
+        cursor: grab;
+        box-shadow: 0 1rem 3rem rgba($text-color-black, 0.39);
+
+        &::after {
+            transform: scaleY(1.8) scaleX(1.4);
+            opacity: 0;
+        }
+    }
+    &:active {
+        transform: translateY(-0.1rem);
+        cursor: grabbing;
+        box-shadow: 0 0.5rem 1rem rgba($text-color-black, 0.349);
+    }
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .3s;
+    }
+    
+}
+
+    &--white {
+        background-color: $text-color-white;
+        color: $text-color-grey;
+
+        &::after {
+            background-color: $text-color-white;
+        }
+    }
+
+    &--anime {
+        animation: buttonmovement .5s ease-out .7s;
+        animation-fill-mode: backwards;
+        /*applies 0% animation properties before loading the page*/
+    }
+}
+@keyframes buttonmovement {
+    0% {
+        opacity: 0%;
+        transform: translateY(2.5rem);
+    }
+
+    80% {
+        transform: translateY(-.5rem);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translate(0);
+    }
+}

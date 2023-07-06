@@ -1,0 +1,160 @@
+.card{
+    //perspective- 180deg card rotation rotation, must be defined in parent element
+    //Functionality
+    perspective: 100rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 53rem;
+    transition: all 1s ease-out;
+
+
+    &__side{
+        height: 53rem;
+        transition: all 1s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.155);
+
+        &--front{
+            // text-align: center;
+            color: $text-color-black;
+            // font-size: xx-large;
+        }
+        &--back{
+            transform: rotateY(180deg);
+            
+            &-1{
+                background-image: linear-gradient(to right bottom, rgb(255, 185, 56), red );
+                text-align: center;
+                color: rgb(0, 255, 238);
+                // font-size: xx-large;
+    
+            }
+
+            &-2{
+                background-image: linear-gradient(to right bottom, rgb(64, 255, 105), rgb(11, 104, 11) );
+                text-align: center;
+                color: rgb(255, 0, 0);
+                // font-size: xx-large;
+    
+            }
+
+            &-3{
+                background-image: linear-gradient(to right bottom, rgb(56, 255, 228), rgb(0, 70, 149) );
+                text-align: center;
+                color: rgb(255, 247, 0);
+                // font-size: xx-large;
+            }
+        }
+    }
+
+
+    //.card:hover .card__side{}
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+    //FRONT SIDE STYLING
+    &__picture{
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen; //new CSS Property
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+        //above line to support all browsers
+        clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+
+        &--1{
+            background-image: 
+            linear-gradient(to right bottom, rgba(240, 198, 122, 0.555), rgba(237, 37, 37, 0.703) ), 
+            url(../img/nat-5.jpg);
+        }
+        &--2{
+            background-image: 
+            linear-gradient(to right bottom, rgba(50, 97, 58, 0.678), rgb(36, 178, 51) ), 
+            url(../img/nat-6.jpg);
+        }
+        &--3{
+            background-image: 
+            linear-gradient(to right bottom, rgba(87, 120, 154, 0.855), rgb(6, 9, 190) ), 
+            url(../img/nat-7.jpg);
+        }
+    }
+
+    &__heading{
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $text-color-white;
+        text-align: right;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 70%;
+    }
+
+    &__heading-span{
+        padding: 1rem 1.5rem;
+        -webkit-box-direction-break: clone;
+        &--1{
+            background-image: linear-gradient(to right bottom, rgb(255, 201, 102), rgba(255, 0, 0, 0.727)  );
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom, rgb(115, 255, 173), rgba(19, 120, 14, 0.549)  );
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom, rgb(121, 161, 255), rgba(27, 18, 103, 0.549)  );
+        }
+    }
+
+    &__details{
+            padding: 3rem;
+        ul{
+            list-style: none;
+            width: 85%;
+            margin: 0 auto;
+    
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem ;
+                
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-grey-dark;
+                }
+            }
+        }
+    }
+        //BACK SIDE STYLING
+        &__back-details{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            text-align: center;
+        }
+    
+        &__price-box{
+            text-align: center;
+            color: $color-white;
+            margin-bottom: 8rem;
+        }
+    
+        &__price-only{
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+    
+        &__price-value{
+            font-size: 6rem;
+            font-weight: 100;
+        }
+}

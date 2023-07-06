@@ -1,0 +1,77 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 1.6rem; */
+    line-height: 1.5;
+    color: $text-color-grey;
+    padding: 2rem;
+}
+
+.mainhead1 {
+    color: $text-color-white;
+    text-transform: uppercase;
+    // backface-visibility: hidden;
+    /*tells if backside of an element while rotating is visible or not*/
+    margin-bottom: 5rem;
+
+     .mainheading--one {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation-name: biglettermovement;
+        animation-duration: 0.65s;
+        animation-timing-function: ease-out;
+        transition: all 0.2s ease-out;
+        /* animation-delay: 0.5s;
+        animation-iteration-count: 3; */
+            &:hover{
+            transform: scale(1.2);
+            transition: all 0.2s ease-out;   
+        }
+    
+    }
+    
+    .mainheading--two {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.7rem;
+        animation: smalllettermovement 0.65s ease-out;
+        transform: translateX(-0.8rem);
+        /* name, duration, animation-timing-function */
+    }
+}
+
+.heading-secondary{
+    display: inline-block;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $color-one, $color-three);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.5s;
+    letter-spacing: 2px;
+
+    &:hover{
+        scale: (1.07);
+        letter-spacing: -6px;
+        transform: rotate(3deg);
+        text-shadow: 0.5rem 0.5rem 2rem rgba(133, 133, 133, 0.553);
+    }
+}
+
+.heading-3{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph{
+    font-size: 1.6rem;
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
