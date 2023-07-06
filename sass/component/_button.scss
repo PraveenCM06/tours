@@ -57,7 +57,7 @@
     }
 
     &--anime {
-        animation: buttonmovement .5s ease-out .5s;
+        animation: buttonmovement .5s ease-out 1.3s;
         animation-fill-mode: backwards;
         /*applies 0% animation properties before loading the page*/
     }
