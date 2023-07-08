@@ -7,13 +7,33 @@
 }
 
 html {
+    //this defines what 1 rem should be
     font-size: 62.5%;
+    //1rem==10px
     /* sometimes people change thier browser zoom size 
     so instead of keeping it as 10px, make it in % 
     so 10px÷16px(16px is browser default)
     10/16=0.625=> 62.5% */
+
+    //put bigger screen size above and smaaler below them
+
+    @include respond(tablet-landscape){
+        //we want 1rem = 9px
+        //we want 9px, 9/16-->56.25
+        font-size: 56.25%;
+    }
+    //sometime it doesnt work so change the order 
+    //of mixins and try
+    @include respond(phone){
+        font-size: 30%;
+    }
+
+    @include respond(big-desktop){
+        font-size: 80%;
+    }
 }
 
 body {
     box-sizing: border-box;
+    padding: 2rem;
 }

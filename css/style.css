@@ -1,4 +1,18 @@
 @charset "UTF-8";
+/*
+0-600p- Phone
+600-900px: Tablet
+1200-1800: is where our normal styles apply
+1800 and above- desktop
+*/
+/*
+$breakpoint argument choices:
+-phone
+-tab-port
+-tab-land
+-big desktop
+*/
+/*order*/
 @keyframes biglettermovement {
   0% {
     opacity: 0%;
@@ -50,17 +64,26 @@ html {
     so instead of keeping it as 10px, make it in % 
     so 10px÷16px(16px is browser default)
     10/16=0.625=> 62.5% */ }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 80%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 2rem; }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   /* font-size: 1.6rem; */
   line-height: 1.5;
-  color: #777;
-  padding: 2rem; }
+  color: #777; }
 
 .mainhead1 {
   color: #fff;
