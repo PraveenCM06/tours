@@ -35,7 +35,6 @@
         top: 0;
         left: 0;
         z-index: 1500;
-        // background-color: orangered;
         opacity: 0;
         width: 0;
         transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -81,11 +80,6 @@
     &__checkbox:checked ~ &__nav{
         opacity: 1;
         width: 100%;
-    }
-    //Functionality------------
-
-    &__checkbox:checked ~ &__background{
-        transform: scale(80);
     }
 
 
@@ -135,5 +129,4 @@
         top: 0;
         transform: rotate(-135deg);
     }
-
 }
