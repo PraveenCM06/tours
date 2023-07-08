@@ -20,11 +20,10 @@ body {
         font-weight: 400;
         letter-spacing: 3.5rem;
         animation-name: biglettermovement;
-        animation-duration: 0.65s;
+        animation-duration: 1s;
         animation-timing-function: ease-out;
         transition: all 0.2s ease-out;
-        /* animation-delay: 0.5s;
-        animation-iteration-count: 3; */
+        /*animation-iteration-count: 3; */
             &:hover{
             transform: scale(1.2);
             transition: all 0.2s ease-out;   
@@ -36,8 +35,7 @@ body {
         font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1.7rem;
-        animation: smalllettermovement 0.65s ease-out;
-        transform: translateX(-0.8rem);
+        animation: smalllettermovement 1s ease-out;
         /* name, duration, animation-timing-function */
     }
 }
