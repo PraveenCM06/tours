@@ -253,8 +253,8 @@ body {
   position: relative; }
   @media (max-width: 56.25em) {
     .header {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 83vh);
-      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 83vh); } }
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 80vh);
+      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 80vh); } }
   .header__logodiv {
     position: absolute;
     top: 3.5rem;
