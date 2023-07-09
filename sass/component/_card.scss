@@ -7,7 +7,11 @@
     height: 53rem;
     transition: all 1s ease-out;
 
-
+    @include respond(phone){
+        width: 70%;
+        position: relative;
+        left: 15%;
+    }
     &__side{
         height: 53rem;
         transition: all 1s ease;
@@ -19,12 +23,6 @@
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.155);
-
-        @include respond(phone){
-            width: 75%;
-            position: relative;
-            left: 6rem;
-        }
         &--front{
             // text-align: center;
             color: $text-color-black;
@@ -145,6 +143,7 @@
             transform: translate(-50%, -50%);
             width: 90%;
             text-align: center;
+
         }
     
         &__price-box{

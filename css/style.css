@@ -522,6 +522,11 @@ body {
   position: relative;
   height: 53rem;
   transition: all 1s ease-out; }
+  @media (max-width: 37.5em) {
+    .card {
+      width: 70%;
+      position: relative;
+      left: 15%; } }
   .card__side {
     height: 53rem;
     transition: all 1s ease;
@@ -533,11 +538,6 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.155); }
-    @media (max-width: 37.5em) {
-      .card__side {
-        width: 75%;
-        position: relative;
-        left: 6rem; } }
     .card__side--front {
       color: black; }
     .card__side--back {
