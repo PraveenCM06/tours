@@ -25,7 +25,7 @@ html {
     //sometime it doesnt work so change the order 
     //of mixins and try
     @include respond(phone){
-        font-size: 30%;
+        font-size: 48%;
     }
 
     @include respond(big-desktop){
@@ -36,4 +36,11 @@ html {
 body {
     box-sizing: border-box;
     padding: 2rem;
+
+    // @include respond(phone){
+    //     padding: 0;
+    // }
+    @include respond(tablet-landscape){
+        padding: 0;
+    }
 }

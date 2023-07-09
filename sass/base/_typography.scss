@@ -9,7 +9,7 @@ body {
 .mainhead1 {
     color: $text-color-white;
     text-transform: uppercase;
-    // backface-visibility: hidden;
+    backface-visibility: hidden;
     /*tells if backside of an element while rotating is visible or not*/
     margin-bottom: 5rem;
 
@@ -22,6 +22,10 @@ body {
         animation-duration: 1s;
         animation-timing-function: ease-out;
         transition: all 0.2s ease-out;
+        @include respond(phone){
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
         /*animation-iteration-count: 3; */
             &:hover{
             transform: scale(1.2);
@@ -36,6 +40,9 @@ body {
         letter-spacing: 1.7rem;
         animation: smalllettermovement 1s ease-out;
         /* name, duration, animation-timing-function */
+        @include respond(phone){
+            letter-spacing: 0.5rem;
+        }
     }
 }
 
@@ -50,6 +57,11 @@ body {
     color: transparent;
     transition: all 0.5s;
     letter-spacing: 2px;
+    transition: all 0.2s;
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
 
     &:hover{
         scale: (1.07);

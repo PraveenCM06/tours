@@ -5,17 +5,34 @@
     
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
+
+        @include respond(phone){
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+
+    @include respond(phone){
+        max-width: 50rem;
     }
 
     @include clearfix;
 
     [class^="col-"] {
-        
         float: left;
-
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+
+            @include respond(phone){
+                margin-right:0;
+                margin-bottom: $gutter-vertical-small;
+
+            }
         }
+
+        @include respond (phone){
+            width: 100% !important;
+        }
+
     }
     //class^="" selects class which starts with col
     //class*="" selects class which coontain col

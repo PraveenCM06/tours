@@ -9,6 +9,10 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
     /* clip-path: polygon(0 100%, 50% 0, 100% 100%); */
+    @include respond(tablet-landscape){
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 83vh);
+        clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 83vh);
+    }
     position: relative;
         &__logodiv {
             position: absolute;
