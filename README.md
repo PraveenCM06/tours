@@ -1,1 +1,1 @@
-Check it Live - https://tours-murex.vercel.app/
+Check it Live - https://tours-praveencm06.vercel.app/
